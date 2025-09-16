@@ -63,7 +63,7 @@ export const createWordCloud = async (container, data) => {
       .size([w, h])
       .words(data.map((d, i) => ({ text: d.text ? d.text : d, size: size(/*d.value*/i) }))) // text, size
       .padding(1)
-      //.rotate(function() { return ~~(Math.random() * 2) * 90; })
+      .rotate(function() { return 0; })
       //.font("Impact")
       .fontSize(d => d.size)
       .on("end", (words) => create(layout, words));
